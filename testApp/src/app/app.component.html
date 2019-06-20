@@ -1,0 +1,46 @@
+<div class="row first">
+  <div class="col col-1 ">
+
+  </div>
+  <div class="col col-1">
+      <img src="../assets/Back.png" class="card-img" style="height:40px ; ">
+  </div>
+  <div class="col col-8">
+    <input type="text" [(ngModel)]="searchText" class="form-control rounded container-fluid"
+      placeholder="Search">
+    <!-- <div class="row">
+      <div class="col col-4" *ngFor="let user of Data.content | search : searchText ;let i of index">
+        <img src="{{user.iuploadname}}" class="card-img" style="height:250px ; ">
+        {{user}}
+      </div>
+    </div> -->
+  </div>
+  <div class="col col-1">
+    <img src="../assets/search.png" (click)="searchNow()" class="card-img" style="height:40px ; ">
+  </div>
+  <div class="col col-1">
+
+  </div>
+</div>
+<div class="row second">
+    <div class="col col-1 container-fluid">
+
+      </div>
+      <div class="col col-10 container-fluid">
+          <div class="row container-fluid">
+            <div class="col col-4 container-fluid" infiniteScroll
+            [infiniteScrollDistance]="2"
+            [infiniteScrollThrottle]="10"
+            (scrolled)="onScroll()" 
+             *ngFor="let user of Data | search : searchText ;let i of index">
+              <img src="../assets/{{user['poster-image']}}" class="card-img" style="height:600px ; ">
+              <span class="imageN">{{user.name}}</span>
+            </div>
+          </div>
+        </div>
+      <div class="col col-1 container-fluid">
+        
+        </div>
+</div>
+
+<!-- <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls> -->

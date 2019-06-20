@@ -1,0 +1,19 @@
+.first{
+    height:192px;
+   
+}
+.imageN{
+    font-size:36pt;
+    color: #FFFFFF;
+    align-items:left;
+    border-bottom: 24px
+}
+.second{
+    border-left: 30px;
+    border-right: 30px;
+    border-bottom: 24px
+}
+.col-10.container-fluid{
+    border-bottom: 90px;
+    margin-top:20px
+}
