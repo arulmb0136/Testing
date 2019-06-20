@@ -60,23 +60,23 @@ app.get('/add', (req, res) => {
     let a = "Rear Window";
     let b = "Family Pot";
     let c = "The Birds";
-    let a1 = "poster1.jpg";
-    let b1 = "poster2.jpg";
-    let c1 = "poster3.jpg";
-    for(let i=0;i<500;i++){
+    let a1 = "poster2.jpg";
+    let b1 = "poster5.jpg";
+    let c1 = "poster1.jpg";
+    for(let i=0;i<100;i++){
         let name1;
         let name2;
         console.log((i%5),(i%3));
         if(i!=0 && (i%5)==0){
-            name1 = c;
-            name2 = "poster"+i%2==1?4+".jpg":5+".jpg";
+            name1 = b;
+            name2 = b1;
         }
         else if(i!=0 && (i%3)==0){
             name1 = a;
-            name2 = b1;
+            name2 = a1;
         }else{
-                name1 = b;
-                name2 = i%3==1?"poster6.jpg":"poster7.jpg"
+                name1 = c;
+                name2 = c1;
         }
         let newUser = new mongoSchema({
             'name': name1,
@@ -89,7 +89,7 @@ app.get('/add', (req, res) => {
                 // res.json({ success: false, msg: "failed to register user" });
             } else {
                 // res.json({ success: true, msg: "User Rigisterd Successfully" });
-                if(i==999){
+                if(i==99){
                     res.json({ success: true, msg: "User Rigisterd Successfully" });
                 }
             }
